@@ -1,10 +1,10 @@
 import React from 'react';
+import fof from '../../../public/fof.jpg'
 
 const ErrorElement = () => {
     return (
         <div>
-            <h1>Error</h1>
-            <h1>404</h1>
+            <img src={fof} alt="" />
         </div>
     );
 };
