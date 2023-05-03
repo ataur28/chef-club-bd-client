@@ -11,7 +11,7 @@ const JobList = ({ jobList }) => {
                 <img className='job-list-logo' src={logo} alt="" />
             </div>
             <h3>{name}</h3>
-            <p>{jobs} Jobs Available</p>
+            <p>{jobs} Food Available</p>
         </div>
     );
 };

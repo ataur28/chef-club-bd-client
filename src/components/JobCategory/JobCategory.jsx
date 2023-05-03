@@ -7,9 +7,7 @@ const JobCategory = () => {
     const jobCategory = useLoaderData();
     return (
         <div>
-            <h1 className='job-category-title'>Job Category List</h1>
-            <p className='job-category-description'>Explore thousands of job opportunities with all the information you need. Its your future</p>
-
+            <h1 className='job-category-title'>Food Category List</h1>
             <div className='job-category-list'>
                 {
                     jobCategory.map(jobList => <JobList

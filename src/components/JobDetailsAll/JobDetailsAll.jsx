@@ -32,8 +32,8 @@ const JobDetailsAll = () => {
             </div>
             <div className='job-details-container'>
                 <div className='job-details-dec'>
-                    <div className='job-feature-item'>
-                        <img className='job-feature-logo' src={picture} alt="" />
+                    <div className='job-feature-item job-details-item '>
+                        <img className='job-feature-logo ' src={picture} alt="" />
                         <h1 className='job-feature-title'>{name}</h1>
                         <p className='job-feature-name'>Experiences: {experiences}</p>
                         <p className='job-feature-name'>Recipes: {recipes_number}</p>

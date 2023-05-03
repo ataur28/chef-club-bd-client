@@ -16,8 +16,7 @@ const JobFeatures = () => {
 
     return (
         <div>
-            <h1 className='feature-title'>Featured Jobs</h1>
-            <p className='feature-description'>Explore thousands of job opportunities with all the information you need. Its your future</p>
+            <h1 className='feature-title'>All Chef</h1>
             <div className='job-feature-items'>
                 {
                     jobs.map(job => <JobDetails
