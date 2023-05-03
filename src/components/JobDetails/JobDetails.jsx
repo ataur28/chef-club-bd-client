@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDollar, faLocation } from '@fortawesome/free-solid-svg-icons'
 
 const JobDetails = ({ job }) => {
-     console.log(job);
+    //  console.log(job);
     const { id, picture, name,experiences, recipes_number, likes } = job;
 
     // const handleAddToCart = (job) => {

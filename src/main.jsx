@@ -23,12 +23,12 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <First></First>,
-        loader: () => fetch('/jobCategory.json')
+        loader: () => fetch('http://localhost:5000/foodList')
       },
       {
         path: 'job-category',
         element: <JobCategory></JobCategory>,
-        loader: () => fetch('/jobCategory.json')
+        loader: () => fetch('http://localhost:5000/foodList')
       },
       {
         path: 'job/:jobId',

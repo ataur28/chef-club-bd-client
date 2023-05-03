@@ -7,9 +7,12 @@ const Home = () => {
     return (
         <div>
             <div className='header-item'>
-                <h1 className='heater-title'>Job Matcher</h1>
+                <h1 className='heater-title'>JobChefClubBD</h1>
                 <Header></Header>
-                <button className='header-btn'>Start Apply</button>
+                <div>
+                <button className='header-btn'>Profile</button>
+                <button className='header-btn btn-login'>Login</button>
+                </div>
             </div>
             <div>{navigation.state === 'loading' && 'Loading...'}</div>
             <Outlet></Outlet>
