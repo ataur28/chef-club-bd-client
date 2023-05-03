@@ -1,0 +1,15 @@
+.chef-item{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/*------------------------------
+     small device media query start
+-------------------------------- */
+
+@media only screen and (max-width:576px) {
+    .chef-item{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
