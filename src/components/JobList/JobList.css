@@ -1,0 +1,11 @@
+.job-list{
+    background-color:rgba(152, 115, 255, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+}
+.job-list-logo {
+    width: 70px;
+    height: 70px;
+    margin: 5px;
+    border-radius: 8px;
+}

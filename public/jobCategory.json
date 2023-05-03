@@ -1,0 +1,26 @@
+[
+    {
+      "id": 1,
+      "name": "Account & Finance",
+      "logo": "https://media.istockphoto.com/id/969456552/photo/internet-loan-e-commerce-money-badge.jpg?s=2048x2048&w=is&k=20&c=oeC6XOlJTYpqtVX6UGryPdOZeqNF9qFhKgJOA_FODZ8=",
+      "jobs": 300
+    },
+    {
+      "id": 2,
+      "name": "Creative Design",
+      "logo": "https://media.istockphoto.com/id/1049884424/photo/spiral-rainbow-background.jpg?s=2048x2048&w=is&k=20&c=c89FO4hQR1hzKmQKGp4RQ6nK3rII6G0i4nbiXk8Lo5I=",
+      "jobs": 100
+    },
+    {
+      "id": 3,
+      "name": "Marketing & Sales",
+      "logo": "https://media.istockphoto.com/id/1473190581/photo/percent-down-arrow.jpg?s=2048x2048&w=is&k=20&c=wqdp69yESaaFNglvXcfpAEyLNIDrRKoRiYL3s-aWkgg=",
+      "jobs": 150
+    },
+    {
+      "id": 4,
+      "name": "Engineering Job",
+      "logo": "https://media.istockphoto.com/id/175386152/photo/gears-globe-with-americas.jpg?s=2048x2048&w=is&k=20&c=fC9ygevGwUEDdPyXzbFeT8-di_cGCJq3h3x3vUP0ZDA=",
+      "jobs": 224
+    }
+  ]
