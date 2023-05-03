@@ -4,6 +4,7 @@ import { useLoaderData, useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDollar, faLocation, faBook, faPhone, faMailBulk } from '@fortawesome/free-solid-svg-icons'
 import { addToDb } from '../../utilities/fakedb';
+import Footer from '../Footer/Footer';
 
 const JobDetailsAll = () => {
     const { jobId } = useParams();
@@ -43,6 +44,7 @@ const JobDetailsAll = () => {
                 </div>
 
             </div>
+            <Footer></Footer>
         </div>
     );
 };

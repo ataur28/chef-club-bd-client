@@ -5,6 +5,7 @@ import banner3 from '../../../public/banner3.jpg'
 import JobCategory from '../JobCategory/JobCategory';
 import { useLoaderData } from 'react-router-dom';
 import JobFeatures from '../JobFeatures/JobFeatures';
+import Footer from '../Footer/Footer';
 
 const First = () => {
     // const job = useLoaderData();
@@ -27,6 +28,9 @@ const First = () => {
             </section>
             <section>
                 <JobCategory></JobCategory>
+            </section>
+            <section>
+                <Footer></Footer>
             </section>
 
         </div>

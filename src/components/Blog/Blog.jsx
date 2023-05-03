@@ -1,5 +1,6 @@
 import React from 'react';
 import './Blog.css'
+import Footer from '../Footer/Footer';
 
 const Blog = () => {
     return (
@@ -40,6 +41,7 @@ const Blog = () => {
 
                     Custom hooks can also improve code readability and reduce complexity by separating concerns and making it easier to reason about the behavior of individual components.</p>
             </div>
+            <Footer></Footer>
         </div>
     );
 };

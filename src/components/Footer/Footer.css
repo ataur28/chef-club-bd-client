@@ -1,0 +1,17 @@
+.footer-section{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 50px;
+    background-color: lightblue;
+}
+.footer-about{
+    text-align: left;
+    padding: 20px;
+}
+.footer-contact,.footer-follow{
+    padding: 20px;
+}
+.footer-icon{
+    margin: 5px;
+}
+    
