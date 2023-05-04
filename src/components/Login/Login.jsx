@@ -7,6 +7,9 @@ import { GithubAuthProvider, GoogleAuthProvider, getAuth, signInWithPopup } from
 import app from '../../firebase/firebases.config';
 
 const Login = () => {
+    const [error, setError] = useState('');
+    const [success, setSuccess] = useState('');
+
     const [user, setUser] = useState(null);
     const auth = getAuth(app);
     const provider = new GoogleAuthProvider();
@@ -53,15 +56,32 @@ const Login = () => {
 
     const handleLogin = event => {
         event.preventDefault();
+        setSuccess('');
+        setError('');
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
         // console.log(email, password);
 
+        // validate
+        // if (!/(?=.*[A-Z])/.test(password)) {
+        //     setError('Please add at least one uppercase');
+        //     return;
+        // }
+        // else if (!/(?=.*[0-9].*[0-9])/.test(password)) {
+        //     setError('Please add at least two numbers');
+        //     return
+        // }
+        // else if (password.length < 6) {
+        //     setError('Please add at least 6 characters in your password')
+        //     return;
+        // }
+
         signIn(email, password)
             .then(result => {
                 const loggedUser = result.user;
                 // console.log(loggedUser);
+                setSuccess('User has been created successfully');
                 navigate(from, { replace: true })
                 // Navigate(from, { replace: true })
             })
@@ -104,6 +124,8 @@ const Login = () => {
                 <Form.Text className="text-danger">
 
                 </Form.Text>
+                <p className='text-danger'>{error}</p>
+                <p className='text-success'>{success}</p>
             </Form>
         </div>
     );
