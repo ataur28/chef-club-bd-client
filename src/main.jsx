@@ -29,18 +29,18 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <First></First>,
-        loader: () => fetch('http://localhost:5000/foodList')
+        loader: () => fetch('https://chef-club-bd-asten-server-ataur28.vercel.app/foodList')
       },
       {
         path: 'job-category',
         element: <JobCategory></JobCategory>,
-        loader: () => fetch('http://localhost:5000/foodList')
+        loader: () => fetch('https://chef-club-bd-asten-server-ataur28.vercel.app/foodList')
       },
       {
         path: 'job/:jobId',
         // element: <JobDetailsAll></JobDetailsAll>,
         element: <PrivateRoute><JobDetailsAll></JobDetailsAll></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/chef`)
+        loader: ({ params }) => fetch(`https://chef-club-bd-asten-server-ataur28.vercel.app/chef`)
         // loader: ({params}) => fetch(`http://127.0.0.1:5173/job/${params.jobId}`)
       },
       {

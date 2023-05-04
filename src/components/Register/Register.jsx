@@ -7,6 +7,7 @@ import { AuthContext } from '../Providers/AuthProvider';
 const Register = () => {
     const {createUser} = useContext(AuthContext);
     const [accepted, setAccepted] = useState(false);
+    const [success, setSuccess] = useState('');
 
     const handleRegister = event => {
         event.preventDefault();
@@ -21,7 +22,8 @@ const Register = () => {
         createUser(email, password)
             .then(result => {
                 const createdUser = result.user;
-                console.log(createdUser);
+                setSuccess('User has been created successfully');
+                // console.log(createdUser);
             })
             .catch(error => {
                 console.log(error);
@@ -74,6 +76,7 @@ const Register = () => {
                 <Form.Text className="text-danger">
 
                 </Form.Text>
+                <p className='text-success'>{success}</p>
             </Form>
         </div>
     );

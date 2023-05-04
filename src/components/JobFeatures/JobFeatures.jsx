@@ -7,7 +7,7 @@ const JobFeatures = () => {
     const [jobs, setJobs] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/chef')
+        fetch('https://chef-club-bd-asten-server-ataur28.vercel.app/chef')
             .then(res => res.json())
             .then(data => setJobs(data))
     }, []);
