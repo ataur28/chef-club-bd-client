@@ -6,6 +6,12 @@ import { faDollar, faLocation, faBook, faPhone, faMailBulk } from '@fortawesome/
 import { addToDb } from '../../utilities/fakedb';
 import Footer from '../Footer/Footer';
 
+
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
+// // import { ToastContainer } from 'react-bootstrap';
+// import Toast from 'react-bootstrap/Toast';
+
 const JobDetailsAll = () => {
     const { jobId } = useParams();
     // console.log(jobs)
@@ -26,8 +32,10 @@ const JobDetailsAll = () => {
     //     addToDb(job.id);
     // }
 
+
     return (
         <div>
+            
             <div>
                 <h1 className='banner-title'>Chef Recipe</h1>
             </div>
@@ -41,6 +49,7 @@ const JobDetailsAll = () => {
                         <p className='job-feature-name'>Recipes: {recipes_number}</p>
                         <p className='job-feature-name'>Likes: {likes}</p>
 
+
                     </div>
                 </div>
                 <div>
@@ -53,6 +62,9 @@ const JobDetailsAll = () => {
                             </p>
                             <p className='job-feature-name'> Rating: {rating}
                             </p>
+                            <button  className='see-more-gallery-btn'>
+                                Favourite Dish</button>
+                                
 
                         </div>
                         <div className='recipe-item'>
@@ -63,6 +75,8 @@ const JobDetailsAll = () => {
                             </p>
                             <p className='job-feature-name'> Rating: {rating}
                             </p>
+                            <button className='see-more-gallery-btn'>
+                                Favourite Dish</button>
 
                         </div>
                         <div className='recipe-item'>
@@ -73,6 +87,8 @@ const JobDetailsAll = () => {
                             </p>
                             <p className='job-feature-name'> Rating: {rating}
                             </p>
+                            <button className='see-more-gallery-btn'>
+                                Favourite Dish</button>
 
                         </div>
                         <div className='recipe-item'>
@@ -83,6 +99,8 @@ const JobDetailsAll = () => {
                             </p>
                             <p className='job-feature-name'> Rating: {rating}
                             </p>
+                            <button className='see-more-gallery-btn'>
+                                Favourite Dish</button>
 
                         </div>
                     </div>

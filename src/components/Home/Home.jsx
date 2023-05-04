@@ -23,7 +23,12 @@ const Home = () => {
                 <h1 className='heater-title'>JobChefClubBD</h1>
                 <Header></Header>
                 <div className='header-btn-icon'>
-                    {user ? <img className='nav-picture' src={user.photoURL} alt="" /> : <FaUserCircle style={{ fontSize: '3rem' }}></FaUserCircle>}
+                    {user && <div className='container'>
+                        <img className='nav-picture' src={user.photoURL} alt="" />
+                        <div className="overlay">
+                            <div className="text">{user.displayName}</div>
+                        </div>
+                    </div>}
 
                     {/* <span>{user.photoURL}</span> */}
                     {/* <img src={user.photoURL} alt="" /> */}
