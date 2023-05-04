@@ -23,6 +23,13 @@
     margin-left: 10px;
 }
 
+.nav-picture{
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    margin-right: 10px;
+}
+
 
 
 .header-item {

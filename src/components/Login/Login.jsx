@@ -1,10 +1,33 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import './Login.css'
 import { Button, Form } from 'react-bootstrap';
 import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Providers/AuthProvider';
+import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
+import app from '../../firebase/firebases.config';
 
 const Login = () => {
+     const [user, setUser] = useState(null);
+     const auth = getAuth(app);
+     const provider = new GoogleAuthProvider();
+
+    const handleGoogleSingIn = (event) => {
+        event.preventDefault();
+        signInWithPopup(auth, provider)
+        // googleSignIn(auth, provider)
+            .then(result => {
+                const LoggedInUser = result.user;
+                console.log(LoggedInUser)
+                navigate(from, { replace: true })
+                setUser(LoggedInUser);
+            })
+            .catch(error => {
+                console.log('error', error.message)
+            })
+    }
+
+
+
     const { signIn } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
@@ -28,7 +51,7 @@ const Login = () => {
             .catch(error => {
                 console.log(error)
             })
-            
+
     }
 
     return (
@@ -47,6 +70,12 @@ const Login = () => {
 
                 <Button variant="primary" type="submit">
                     Login
+                </Button>
+                <Button onClick={handleGoogleSingIn} variant="primary" className='ms-3 me-3' >
+                    Google Login
+                </Button>
+                <Button variant="primary" >
+                    GitHub Login
                 </Button>
                 <br />
                 <Form.Text className="text-secondary">
