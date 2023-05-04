@@ -18,6 +18,7 @@ import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import AuthProvider from './components/Providers/AuthProvider';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Terms from './components/Terms/Terms';
 
 const router = createBrowserRouter([
   {
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
       {
         path: 'register',
         element: <Register></Register>
+      },
+      {
+        path: 'terms',
+        element: <Terms></Terms>
       },
       {
         path: '*',
