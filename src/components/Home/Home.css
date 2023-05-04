@@ -32,6 +32,13 @@
     gap: 10px;
 }
 
+
+.header-btn-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /*------------------------------
      small device media query start
 -------------------------------- */
