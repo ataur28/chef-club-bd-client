@@ -6,6 +6,7 @@ import JobCategory from '../JobCategory/JobCategory';
 import { useLoaderData } from 'react-router-dom';
 import JobFeatures from '../JobFeatures/JobFeatures';
 import Footer from '../Footer/Footer';
+import FoodGallery from '../FoodGallery/FoodGallery';
 
 const First = () => {
     // const job = useLoaderData();
@@ -28,6 +29,9 @@ const First = () => {
             </section>
             <section>
                 <JobCategory></JobCategory>
+            </section>
+            <section>
+                <FoodGallery></FoodGallery>
             </section>
             <section>
                 <Footer></Footer>
