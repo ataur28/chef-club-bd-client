@@ -7,13 +7,6 @@
     margin-top: 50px;
 }
 
-/* .feature-description {
-    font-family: 'Manrope';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    color: #757575;
-} */
 
 .job-feature-items{
     display: grid;
@@ -21,18 +14,7 @@
     gap: 20px;
 }
 
-/* .see-all-jobs-btn{
-    background: linear-gradient(90deg, #7E90FE 0%, #9873FF 100%);
-    border-radius: 8px;
-    padding: 20px;
-    font-family: 'Manrope';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 20px;
-    color: #FFFFFF;
-    width: 180px;
-    margin-top: 30px;
-} */
+
 
 /*------------------------------
      small device media query start
