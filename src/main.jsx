@@ -17,6 +17,7 @@ import jobsLoader from './loaders/jobsLoader';
 import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import AuthProvider from './components/Providers/AuthProvider';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -36,7 +37,8 @@ const router = createBrowserRouter([
       },
       {
         path: 'job/:jobId',
-        element: <JobDetailsAll></JobDetailsAll>,
+        // element: <JobDetailsAll></JobDetailsAll>,
+        element: <PrivateRoute><JobDetailsAll></JobDetailsAll></PrivateRoute>,
         loader: ({ params }) => fetch(`http://localhost:5000/chef`)
         // loader: ({params}) => fetch(`http://127.0.0.1:5173/job/${params.jobId}`)
       },

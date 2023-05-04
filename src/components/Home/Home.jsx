@@ -8,7 +8,7 @@ import { Button } from 'react-bootstrap';
 
 const Home = () => {
 
-    const { user } = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
 
     const handleLogOut = () => {
         logOut()
