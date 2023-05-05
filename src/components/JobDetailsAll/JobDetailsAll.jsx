@@ -7,8 +7,8 @@ import { addToDb } from '../../utilities/fakedb';
 import Footer from '../Footer/Footer';
 
 
-// import { ToastContainer, toast } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 // // import { ToastContainer } from 'react-bootstrap';
 // import Toast from 'react-bootstrap/Toast';
 
@@ -31,6 +31,13 @@ const JobDetailsAll = () => {
     //     console.log(newJobs)
     //     addToDb(job.id);
     // }
+
+    const favToast = (event) =>{
+        // alert("The recipe is my favorite")
+        toast("The recipe is my favorite");
+         event.target.disabled = true;
+
+    }
 
 
     return (
@@ -62,7 +69,7 @@ const JobDetailsAll = () => {
                             </p>
                             <p className='job-feature-name'> Rating: {rating}
                             </p>
-                            <button  className='see-more-gallery-btn'>
+                            <button   onClick={favToast} className='see-more-gallery-btn btn-details'>
                                 Favourite Dish</button>
                                 
 
@@ -75,7 +82,7 @@ const JobDetailsAll = () => {
                             </p>
                             <p className='job-feature-name'> Rating: {rating}
                             </p>
-                            <button className='see-more-gallery-btn'>
+                            <button onClick={favToast} className='see-more-gallery-btn'>
                                 Favourite Dish</button>
 
                         </div>
@@ -87,7 +94,7 @@ const JobDetailsAll = () => {
                             </p>
                             <p className='job-feature-name'> Rating: {rating}
                             </p>
-                            <button className='see-more-gallery-btn'>
+                            <button onClick={favToast} className='see-more-gallery-btn'>
                                 Favourite Dish</button>
 
                         </div>
@@ -99,7 +106,7 @@ const JobDetailsAll = () => {
                             </p>
                             <p className='job-feature-name'> Rating: {rating}
                             </p>
-                            <button className='see-more-gallery-btn'>
+                            <button onClick={favToast} className='see-more-gallery-btn'>
                                 Favourite Dish</button>
 
                         </div>
@@ -108,6 +115,7 @@ const JobDetailsAll = () => {
 
             </div>
             <Footer></Footer>
+            <ToastContainer />
         </div>
     );
 };

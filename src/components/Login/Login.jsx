@@ -12,6 +12,7 @@ const Login = () => {
 
     const [user, setUser] = useState(null);
     const auth = getAuth(app);
+    // console.log(app)
     const provider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
 
