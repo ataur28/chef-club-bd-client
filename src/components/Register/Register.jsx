@@ -1,16 +1,20 @@
 import React, { useContext, useState } from 'react';
 import './Register.css'
 import { Button, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import { AuthContext } from '../Providers/AuthProvider';
+import {  useNavigate } from 'react-router-dom';
 
 const Register = () => {
     const {createUser} = useContext(AuthContext);
     const [accepted, setAccepted] = useState(false);
     const [success, setSuccess] = useState('');
+    const [error, setError] = useState('')
 
     const handleRegister = event => {
-        event.preventDefault();
+        // event.preventDefault();
+        // setSuccess('');
+        // setError('');
         const form = event.target;
         const name = form.name.value;
         const photo = form.photo.value;
@@ -18,11 +22,25 @@ const Register = () => {
         const password = form.password.value;
 
 
+        // validate
+        // if (!/(?=.*[A-Z])/.test(password)) {
+        //     setError('Please add at least one uppercase');
+        //     return;
+        // }
+        // else if (!/(?=.*[0-9].*[0-9])/.test(password)) {
+        //     setError('Please add at least two numbers');
+        //     return
+        // }
+        // else if (password.length < 6) {
+        //     setError('Please add at least 6 characters in your password')
+        //     return;
+        // }
+
         createUser(email, password)
             .then(result => {
                 const createdUser = result.user;
                 setSuccess('User Register successfully');
-                 console.log(createdUser);
+                console.log(createdUser);
             })
             .catch(error => {
                 console.log(error);
@@ -52,7 +70,7 @@ const Register = () => {
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" name='password' placeholder="Password" required />
+                    <Form.Control type="password" name='password' placeholder="Password at least 6 characters" required />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
@@ -76,6 +94,7 @@ const Register = () => {
 
                 </Form.Text>
                 <p className='text-success'>{success}</p>
+                <p className='text-danger'>{error}</p>
             </Form>
         </div>
     );
